@@ -1,0 +1,853 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class PaginadeprodutosWidget extends StatefulWidget {
+  const PaginadeprodutosWidget({Key? key}) : super(key: key);
+
+  @override
+  _PaginadeprodutosWidgetState createState() => _PaginadeprodutosWidgetState();
+}
+
+class _PaginadeprodutosWidgetState extends State<PaginadeprodutosWidget> {
+  final _unfocusNode = FocusNode();
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30,
+          borderWidth: 1,
+          buttonSize: 60,
+          icon: Icon(
+            Icons.arrow_back_rounded,
+            color: Color(0xFF1D2429),
+            size: 30,
+          ),
+          onPressed: () async {
+            context.pushNamed(
+              'Home',
+              extra: <String, dynamic>{
+                kTransitionInfoKey: TransitionInfo(
+                  hasTransition: true,
+                  transitionType: PageTransitionType.leftToRight,
+                  duration: Duration(milliseconds: 220),
+                ),
+              },
+            );
+          },
+        ),
+        title: Text(
+          'App sem funcionalidade',
+          style: FlutterFlowTheme.of(context).subtitle1.override(
+                fontFamily: 'Outfit',
+                color: Color(0xFF1D2429),
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 0,
+      ),
+      body: GestureDetector(
+        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Expanded(
+              child: DefaultTabController(
+                length: 2,
+                initialIndex: 0,
+                child: Column(
+                  children: [
+                    TabBar(
+                      labelColor: Color(0xFF4B39EF),
+                      unselectedLabelColor: Color(0xFF57636C),
+                      labelStyle:
+                          FlutterFlowTheme.of(context).subtitle1.override(
+                                fontFamily: 'Outfit',
+                                color: Color(0xFF1D2429),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                              ),
+                      indicatorColor: Color(0xFF4B39EF),
+                      tabs: [
+                        Tab(
+                          text: 'Homem',
+                        ),
+                        Tab(
+                          text: 'Mulher',
+                        ),
+                      ],
+                    ),
+                    Expanded(
+                      child: TabBarView(
+                        children: [
+                          SingleChildScrollView(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 16, 0, 0),
+                                  child: Text(
+                                    'Categories',
+                                    style: FlutterFlowTheme.of(context)
+                                        .title3
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Color(0xFF1D2429),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.network(
+                                              'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7c5678f4-c28d-4862-a8d9-56750f839f12/zion-1-basketball-shoes-bJ0hLJ.png',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Edição Llimitada',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 12, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.network(
+                                              'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cd1fc4e4-5d02-4f18-afd7-a1ea42ff1f73/sportswear-club-fleece-pullover-hoodie-Gw4Nwq.png',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Moletom',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.network(
+                                              'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5de4d66e-c076-4bf7-80ca-a220e301cb3a/sportswear-club-fleece-joggers-KflRdQ.png',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Calças',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.network(
+                                              'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c174c147-1795-41be-8849-b61975cc7ba0/sportswear-sport-essentials-mens-woven-lined-flow-shorts-5nvp4d.png',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Shorts ',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.network(
+                                              'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/64797ee7-26d7-4bd7-97c8-84d4edd8a48f/sportswear-mens-fleece-shorts-GPCN4W.png',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'bermudas  Casual',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.network(
+                                              'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/55f6abe8-760c-427f-8cfa-b2df31bdd5b5/jordan-sport-dna-85-mens-t-shirt-ZLs0q3.png',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Blusa Social',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 44),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.network(
+                                              'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e67ed1da-48bf-4d03-9654-fa9c7b76ecce/blazer-mid-77-vintage-mens-shoes-nw30B2.png',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Sapatos',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SingleChildScrollView(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 16, 0, 0),
+                                  child: Text(
+                                    'Categories',
+                                    style: FlutterFlowTheme.of(context)
+                                        .title3
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Color(0xFF1D2429),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.asset(
+                                              'assets/images/ArquivoExibir.jpg',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Edição Limitada',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 12, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.asset(
+                                              'assets/images/images.jpg',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Blusas',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.asset(
+                                              'assets/images/download.jpg',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Calças',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.asset(
+                                              'assets/images/download.jpg',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Acessórios',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.asset(
+                                              'assets/images/images.jpg',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Moletom',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.asset(
+                                              'assets/images/download.jpg',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Perfumes',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 8, 16, 44),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF1F4F8),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 8, 12, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.asset(
+                                              'assets/images/images.jpg',
+                                              width: 70,
+                                              height: 70,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
+                                            child: Text(
+                                              'Cremes',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .subtitle1
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF1D2429),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
